@@ -1,0 +1,61 @@
+{
+  "name": "Java8-Node14-Angular12",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17.0.5-tem",
+      "installMaven": "true",
+      "installGradle": "false"
+    },
+    "ghcr.io/devcontainers/features/docker-from-docker:1": {
+      "dockerDashComposeVersion": "v2"
+    }
+  },
+
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Set *default* container specific settings.json values on container create.
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "java.import.gradle.java.home": "/usr/local/sdkman/candidates/java/current",
+        "java.configuration.runtimes": [
+          {
+            "default": true,
+            "name": "JavaSE-17",
+            "path": "/usr/local/sdkman/candidates/java/current"
+          },
+          {
+            "default": false,
+            "name": "JavaSE-1.8",
+            "path": "/usr/local/sdkman/candidates/java/8.0.352-tem"
+          }
+        ],
+        "[java]": { "editor.defaultFormatter": "redhat.java" },
+        "[xml]": { "editor.defaultFormatter": "redhat.vscode-xml" }
+      },
+      "extensions": [
+        "azuretools.vscode-docker",
+        "esbenp.prettier-vscode",
+        "humao.rest-client",
+        "pivotal.vscode-boot-dev-pack",
+        "redhat.vscode-xml",
+        "sonarsource.sonarlint-vscode",
+        "vscjava.vscode-java-pack",
+        "wakatime.vscode-wakatime"
+      ]
+    }
+  }
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "java -version",
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}
