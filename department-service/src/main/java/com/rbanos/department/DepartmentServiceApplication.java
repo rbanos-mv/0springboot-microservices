@@ -1,4 +1,4 @@
-package com.rbanos.departmentservice;
+package com.rbanos.department;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
